@@ -207,7 +207,7 @@ export default function HomePageClient() {
                 Contact
               </h3>
               <p className="text-sm text-muted-foreground">
-                Let's connect! Open to opportunities, collaborations, and meaningful conversations.
+                Let&apos;s connect! Open to opportunities, collaborations, and meaningful conversations.
               </p>
             </div>
           </Link>
