@@ -75,7 +75,7 @@ export default function ContactPage() {
                     <Input
                       id="subject"
                       type="text"
-                      placeholder="What's this about?"
+                      placeholder="What&apos;s this about?"
                       className="bg-background/50 border-white/20"
                     />
                   </div>
@@ -162,7 +162,7 @@ export default function ContactPage() {
 
             <Card className="glass border-white/10">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">What I'm Looking For</h3>
+                <h3 className="text-xl font-semibold mb-4">What I&apos;m Looking For</h3>
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <p>• Full-stack development opportunities</p>
                   <p>• Open source collaborations</p>

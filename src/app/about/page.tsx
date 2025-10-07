@@ -53,14 +53,14 @@ export default function AboutPage() {
                       works evolved into a passion for creating solutions that make a real impact.
                     </p>
                     <p>
-                      Through my professional experience, I've had the opportunity to work on diverse projects 
+                      Through my professional experience, I&apos;ve had the opportunity to work on diverse projects 
                       that span from restaurant websites driving 80% customer acquisition growth to accessibility-focused 
                       development for the Hearing Loss Association. Each project has taught me the importance of 
                       understanding both technical challenges and user needs.
                     </p>
                     <p>
                       My expertise ranges from frontend development with React and TypeScript to blockchain 
-                      development with Solidity, and even game development with Lua scripting. I'm passionate 
+                      development with Solidity, and even game development with Lua scripting. I&apos;m passionate 
                       about building applications that are not just functional, but also accessible, performant, 
                       and user-friendly.
                     </p>
@@ -179,7 +179,7 @@ export default function AboutPage() {
             >
               <Card className="glass border-white/10">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">Let's Connect</h3>
+                <h3 className="text-xl font-semibold mb-4">Let&apos;s Connect</h3>
                   <div className="space-y-3">
                     <Button variant="outline" className="w-full justify-start" asChild>
                       <a href="https://github.com/Wilfred2002" target="_blank" rel="noopener noreferrer">
