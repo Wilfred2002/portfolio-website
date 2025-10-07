@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/common/Navigation";
 import CommandPalette from "@/components/common/CommandPalette";
 import QueryProvider from "@/components/providers/QueryProvider";
+import InitialLoader from "@/components/common/InitialLoader";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -68,6 +69,7 @@ export default function RootLayout({
       >
         <QueryProvider>
           <div className="min-h-screen bg-background text-foreground">
+            <InitialLoader />
             <Navigation />
             <main className="relative">
               {children}

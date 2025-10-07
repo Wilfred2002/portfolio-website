@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Github, ExternalLink } from 'lucide-react';
+import { ArrowRight, Github, ExternalLink, Command, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { heroVariants } from '@/lib/animations';
 
@@ -96,6 +96,32 @@ export default function HomePageClient() {
                 <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
                   Hey, It&apos;s Wilfred, welcome to my portfolio.
                 </p>
+                <div className="mt-6 flex items-center justify-center gap-3">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center gap-2"
+                    onClick={() => {
+                      const e = new KeyboardEvent('keydown', { key: 'k', metaKey: navigator.platform.includes('Mac'), ctrlKey: !navigator.platform.includes('Mac') });
+                      window.dispatchEvent(e);
+                    }}
+                  >
+                    <Command className="w-4 h-4" />
+                    <span>Open Command Palette</span>
+                    <span className="ml-1 text-xs text-muted-foreground hidden sm:inline">(⌘K)</span>
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="flex items-center gap-2"
+                    onClick={() => {
+                      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+                    }}
+                  >
+                    <ChevronDown className="w-4 h-4" />
+                    <span>Scroll down</span>
+                  </Button>
+                </div>
               </div>
             </div>
           </motion.div>
