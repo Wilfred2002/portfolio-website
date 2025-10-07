@@ -20,6 +20,7 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
   const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,8 +54,8 @@ export default function Navigation() {
         initial="hidden"
         animate="visible"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'glass border-b border-white/10 backdrop-blur-md' 
+          (isHome || isScrolled)
+            ? 'glass border-b border-white/10 backdrop-blur-md'
             : 'bg-transparent'
         }`}
       >
@@ -120,7 +121,7 @@ export default function Navigation() {
                 className="text-muted-foreground hover:text-foreground"
               >
                 <a
-                  href="https://github.com/wilfrednaraga"
+                  href="https://github.com/Wilfred2002"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2"
@@ -225,7 +226,7 @@ export default function Navigation() {
                       asChild
                     >
                       <a
-                        href="https://github.com/wilfrednaraga"
+                        href="https://github.com/Wilfred2002"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

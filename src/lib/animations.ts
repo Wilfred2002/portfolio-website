@@ -1,6 +1,5 @@
 import { Variants } from 'framer-motion';
 
-// Card animation variants
 export const cardVariants: Variants = {
   hidden: { 
     opacity: 0, 
@@ -33,7 +32,6 @@ export const cardVariants: Variants = {
   }
 };
 
-// Stagger container for multiple cards
 export const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -45,7 +43,6 @@ export const staggerContainer: Variants = {
   }
 };
 
-// Navigation animation variants
 export const navVariants: Variants = {
   hidden: { 
     opacity: 0, 
@@ -61,7 +58,6 @@ export const navVariants: Variants = {
   }
 };
 
-// Page transition variants
 export const pageVariants: Variants = {
   initial: { 
     opacity: 0, 
@@ -85,7 +81,6 @@ export const pageVariants: Variants = {
   }
 };
 
-// Hero section animations
 export const heroVariants: Variants = {
   hidden: { 
     opacity: 0, 
@@ -102,7 +97,6 @@ export const heroVariants: Variants = {
   }
 };
 
-// Typewriter effect for titles
 export const typewriterVariants: Variants = {
   hidden: { 
     opacity: 0 
@@ -116,7 +110,6 @@ export const typewriterVariants: Variants = {
   }
 };
 
-// Skill constellation animations
 export const skillNodeVariants: Variants = {
   hidden: { 
     opacity: 0, 
@@ -138,7 +131,6 @@ export const skillNodeVariants: Variants = {
   }
 };
 
-// Command palette animations
 export const commandPaletteVariants: Variants = {
   hidden: { 
     opacity: 0, 
@@ -165,7 +157,6 @@ export const commandPaletteVariants: Variants = {
   }
 };
 
-// Glow effect animations
 export const glowVariants: Variants = {
   hidden: { 
     opacity: 0 
@@ -186,7 +177,6 @@ export const glowVariants: Variants = {
   }
 };
 
-// Particle field animations
 export const particleVariants: Variants = {
   hidden: { 
     opacity: 0 
@@ -200,7 +190,6 @@ export const particleVariants: Variants = {
   }
 };
 
-// Mobile menu animations
 export const mobileMenuVariants: Variants = {
   hidden: { 
     opacity: 0, 
@@ -224,7 +213,6 @@ export const mobileMenuVariants: Variants = {
   }
 };
 
-// Filter bar animations
 export const filterVariants: Variants = {
   hidden: { 
     opacity: 0, 
@@ -240,7 +228,6 @@ export const filterVariants: Variants = {
   }
 };
 
-// Code rain animation
 export const codeRainVariants: Variants = {
   hidden: { 
     opacity: 0 
@@ -254,14 +241,12 @@ export const codeRainVariants: Variants = {
   }
 };
 
-// Utility function for creating staggered delays
 export const createStaggerDelay = (index: number, baseDelay: number = 0.1) => ({
   transition: {
     delay: baseDelay * index
   }
 });
 
-// Spring configuration for smooth animations
 export const springConfig = {
   type: "spring" as const,
   stiffness: 100,
@@ -269,7 +254,6 @@ export const springConfig = {
   mass: 1
 };
 
-// Easing functions
 export const easing = {
   easeOut: [0.0, 0.0, 0.2, 1],
   easeIn: [0.4, 0.0, 1, 1],

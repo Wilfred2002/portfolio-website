@@ -1,6 +1,5 @@
 import { ProjectMetadata } from '@/lib/github';
 
-// Project metadata for enriching GitHub data
 export const projectMetadata: Record<string, ProjectMetadata> = {
   'monad-mcp-server': {
     featured: true,
@@ -219,7 +218,6 @@ export const projectMetadata: Record<string, ProjectMetadata> = {
   }
 };
 
-// Skills data for the constellation visualization
 export const skillsData = {
   'Frontend Development': {
     level: 90,
@@ -289,7 +287,6 @@ export const skillsData = {
   }
 };
 
-// Technology categories for filtering
 export const technologyCategories = {
   'Frontend': ['React', 'TypeScript', 'JavaScript', 'CSS', 'HTML', 'Tailwind CSS'],
   'Backend': ['Node.js', 'Python', 'Express', 'FastAPI', 'MongoDB', 'Redis'],
@@ -298,7 +295,6 @@ export const technologyCategories = {
   'Languages': ['TypeScript', 'JavaScript', 'Python', 'SQL']
 };
 
-// Project categories
 export const projectCategories = {
   'web-app': 'Web Applications',
   'library': 'Libraries & Packages',

@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { heroVariants } from '@/lib/animations';
-import SkillConstellation from './SkillConstellation';
+import dynamic from 'next/dynamic';
+const SkillConstellation = dynamic(() => import('./SkillConstellation'), { ssr: false, loading: () => null });
 
 export default function SkillsClient() {
   return (

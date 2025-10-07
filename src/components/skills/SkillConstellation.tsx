@@ -40,11 +40,9 @@ export default function SkillConstellation() {
     const skillNodes: SkillNode[] = [];
     const skillConnections: Connection[] = [];
     
-    // Group skills into Frontend and Backend categories
     const frontendSkills = ['React', 'TypeScript', 'JavaScript', 'CSS', 'HTML', 'Tailwind CSS'];
     const backendSkills = ['Node.js', 'PostgreSQL', 'Stripe', 'Solidity', 'C++', 'Lua'];
     
-    // Create Frontend node
     const frontendLevel = Math.round(
       frontendSkills.reduce((sum, skill) => {
         const skillData = skillsData[skill as keyof typeof skillsData];
@@ -63,7 +61,6 @@ export default function SkillConstellation() {
       projects: ['seoul-website', 'hearing-loss-website', 'pokemon-ecommerce', 'manga-king']
     });
     
-    // Create Backend node
     const backendLevel = Math.round(
       backendSkills.reduce((sum, skill) => {
         const skillData = skillsData[skill as keyof typeof skillsData];
@@ -82,7 +79,6 @@ export default function SkillConstellation() {
       projects: ['pokemon-ecommerce', 'monad-mcp-server', 'csgo-aimbot']
     });
 
-    // Create connection between Frontend and Backend
     skillConnections.push({
       from: 'frontend',
       to: 'backend',

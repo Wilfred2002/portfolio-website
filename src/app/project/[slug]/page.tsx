@@ -10,8 +10,6 @@ interface ProjectDetailPageProps {
 }
 
 export async function generateMetadata({ params }: ProjectDetailPageProps): Promise<Metadata> {
-  // This would ideally fetch the project data here, but since we're using client-side hooks,
-  // we'll use a generic metadata for now
   return {
     title: `${params.slug} | Portfolio`,
     description: 'Project details and technical information.',

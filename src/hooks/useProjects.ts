@@ -1,20 +1,17 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, UseQueryResult } from '@tanstack/react-query';
 import { fetchGitHubRepos, enrichProjectData, EnrichedProject } from '@/lib/github';
 import { projectMetadata } from '@/data/projects';
 
-export function useProjects() {
-  return useQuery({
+export function useProjects(): UseQueryResult<EnrichedProject[], Error> {
+  return useQuery<EnrichedProject[]>({
     queryKey: ['projects'],
     queryFn: async () => {
       try {
-        // In a real implementation, this would fetch from GitHub API
-        // For now, we'll use mock data
         const repos = await fetchGitHubRepos();
         
-        // Enrich with local metadata
         const enrichedProjects = repos.map(repo => {
           const metadata = projectMetadata[repo.name] || {
             featured: false,
@@ -30,7 +27,6 @@ export function useProjects() {
           return enrichProjectData(repo, metadata);
         });
 
-        // Sort by order and featured status
         return enrichedProjects.sort((a, b) => {
           if (a.featured && !b.featured) return -1;
           if (!a.featured && b.featured) return 1;
@@ -38,7 +34,6 @@ export function useProjects() {
         });
       } catch (error) {
         console.error('Error fetching projects:', error);
-        // Return mock data as fallback
         return Object.values(projectMetadata).map((metadata, index) => ({
           name: `project-${index}`,
           description: 'Mock project description',
@@ -64,8 +59,8 @@ export function useProjects() {
         }));
       }
     },
-    staleTime: 5 * 60 * 1000, // 5 minutes
-    cacheTime: 10 * 60 * 1000, // 10 minutes
+    staleTime: 5 * 60 * 1000,
+    gcTime: 10 * 60 * 1000,
   });
 }
 
@@ -87,7 +82,6 @@ export function useGitHubStats() {
     queryKey: ['github-stats'],
     queryFn: async () => {
       try {
-        // Mock GitHub stats - in real implementation, fetch from GitHub API
         return {
           totalRepos: 15,
           totalStars: 234,
@@ -111,6 +105,6 @@ export function useGitHubStats() {
         return null;
       }
     },
-    staleTime: 10 * 60 * 1000, // 10 minutes
+    staleTime: 10 * 60 * 1000,
   });
 }

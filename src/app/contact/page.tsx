@@ -139,7 +139,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-semibold mb-4">Connect Online</h3>
                 <div className="space-y-3">
                   <Button variant="outline" className="w-full justify-start" asChild>
-                    <a href="https://github.com/wilfrednaraga" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Wilfred2002" target="_blank" rel="noopener noreferrer">
                       <Github className="w-4 h-4 mr-2" />
                       GitHub
                     </a>
