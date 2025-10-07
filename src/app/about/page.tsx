@@ -49,26 +49,20 @@ export default function AboutPage() {
                   <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
                       My journey in technology began at West Chester University of Pennsylvania, where I pursued 
-                      my Bachelor of Science in Computer Science. What started as curiosity about how software 
-                      works evolved into a passion for creating solutions that make a real impact.
+                      my Bachelor of Science in Computer Science.
                     </p>
                     <p>
-                      Through my professional experience, I&apos;ve had the opportunity to work on diverse projects 
-                      that span from restaurant websites driving 80% customer acquisition growth to accessibility-focused 
+                      Through my experience, I&apos;ve had the opportunity to work on diverse projects 
+                      that span from restaurant websites driving customer acquisition growth to accessibility-focused 
                       development for the Hearing Loss Association. Each project has taught me the importance of 
                       understanding both technical challenges and user needs.
                     </p>
                     <p>
-                      My expertise ranges from frontend development with React and TypeScript to blockchain 
-                      development with Solidity, and even game development with Lua scripting. I&apos;m passionate 
-                      about building applications that are not just functional, but also accessible, performant, 
-                      and user-friendly.
+                      I&apos;m proficient across both frontend and backend development—building responsive React/TypeScript interfaces and reliable Node.js/.NET services—and I have foundational experience writing smart contracts in Solidity for on-chain workflows. I enjoy shipping end-to-end features that bridge great UX with solid engineering.
                     </p>
                     <p>
-                      When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open-source 
-                      projects, or working on innovative solutions like my Model Context Protocol server for 
-                      blockchain development. I&apos;m always excited to tackle challenging problems and learn 
-                      something new.
+                      When I&apos;m not coding, you&apos;ll find me traveling, gaming, or reading manga!
+                      If you want to connect with me, you can find me on LinkedIn or send me an email!
                     </p>
                   </div>
                 </CardContent>
