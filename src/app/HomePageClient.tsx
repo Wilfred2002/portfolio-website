@@ -88,19 +88,19 @@ export default function HomePageClient() {
           <canvas ref={canvasRef} className="absolute inset-0 h-full w-full bg-black" />
           {/* Intro line that shows at the very start, fades out as you scroll */}
           <motion.div
-            style={{ opacity: introOpacity as any, y: introY as any }}
+            style={{ opacity: introOpacity, y: introY }}
             className="absolute inset-0 flex items-start pt-32"
           >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-3xl mx-auto">
                 <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                  Hey, It's Wilfred, welcome to my portfolio.
+                  Hey, It&apos;s Wilfred, welcome to my portfolio.
                 </p>
               </div>
             </div>
           </motion.div>
           <motion.div
-            style={{ opacity: overlayOpacity as any, y: overlayY as any }}
+            style={{ opacity: overlayOpacity, y: overlayY }}
             className="absolute inset-0 flex items-center"
           >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">

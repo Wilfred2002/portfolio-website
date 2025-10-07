@@ -65,9 +65,9 @@ export default function AboutPage() {
                       and user-friendly.
                     </p>
                     <p>
-                      When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
+                      When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open-source 
                       projects, or working on innovative solutions like my Model Context Protocol server for 
-                      blockchain development. I'm always excited to tackle challenging problems and learn 
+                      blockchain development. I&apos;m always excited to tackle challenging problems and learn 
                       something new.
                     </p>
                   </div>

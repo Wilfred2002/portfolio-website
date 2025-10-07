@@ -20,11 +20,11 @@ export default function ContactPage() {
         <div className="text-center max-w-4xl mx-auto mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              Let's Connect
+              Let&apos;s Connect
             </span>
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            I'm always excited to discuss new opportunities, collaborate on interesting projects, 
+            I&apos;m always excited to discuss new opportunities, collaborate on interesting projects, 
             or simply chat about technology and development.
           </p>
         </div>

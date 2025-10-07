@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Code2, Copy, Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { EnrichedProject } from '@/lib/github';
