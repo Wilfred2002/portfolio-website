@@ -1,21 +1,15 @@
 import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { useProject } from '@/hooks/useProjects';
 import ProjectDetailClient from '@/components/projects/ProjectDetailClient';
 
-interface ProjectDetailPageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export async function generateMetadata({ params }: ProjectDetailPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
   return {
-    title: `${params.slug} | Portfolio`,
+    title: `${slug} | Portfolio`,
     description: 'Project details and technical information.',
   };
 }
 
-export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
-  return <ProjectDetailClient slug={params.slug} />;
+export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  return <ProjectDetailClient slug={slug} />;
 }
