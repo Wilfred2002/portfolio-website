@@ -23,8 +23,7 @@ export default function AboutPage() {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Computer Science Graduate passionate about creating innovative solutions 
-            through clean code and thoughtful design.
+          One project at a time.
           </p>
         </div>
       </motion.section>
@@ -58,7 +57,7 @@ export default function AboutPage() {
                       understanding both technical challenges and user needs.
                     </p>
                     <p>
-                      I&apos;m proficient across both frontend and backend development—building responsive React/TypeScript interfaces and reliable Node.js/.NET services—and I have foundational experience writing smart contracts in Solidity for on-chain workflows. I enjoy shipping end-to-end features that bridge great UX with solid engineering.
+                      I&apos;m proficient across both frontend and backend development—building responsive React/TypeScript interfaces and reliable Node.js/.NET services—and I have foundational experience writing smart contracts in Solidity for on-chain workflows. 
                     </p>
                     <p>
                       When I&apos;m not coding, you&apos;ll find me traveling, gaming, or reading manga!
