@@ -24,8 +24,7 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            I&apos;m always excited to discuss new opportunities, collaborate on interesting projects, 
-            or simply chat about technology and development.
+            Connect with me! Feel free to send me a message, or connect with me on LinkedIn!
           </p>
         </div>
       </motion.section>
