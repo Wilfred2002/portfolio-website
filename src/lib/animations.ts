@@ -134,13 +134,11 @@ export const skillNodeVariants: Variants = {
 export const commandPaletteVariants: Variants = {
   hidden: { 
     opacity: 0, 
-    scale: 0.95,
-    y: 20
+    scale: 0.95
   },
   visible: { 
     opacity: 1, 
     scale: 1,
-    y: 0,
     transition: { 
       duration: 0.2,
       ease: "easeOut"
@@ -149,7 +147,6 @@ export const commandPaletteVariants: Variants = {
   exit: { 
     opacity: 0, 
     scale: 0.95,
-    y: 20,
     transition: { 
       duration: 0.15,
       ease: "easeIn"

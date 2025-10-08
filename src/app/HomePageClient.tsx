@@ -96,7 +96,7 @@ export default function HomePageClient() {
                 <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
                   Hey, It&apos;s Wilfred, welcome to my portfolio.
                 </p>
-                <div className="mt-6 flex items-center justify-center gap-3">
+                <div className="mt-4 flex items-center justify-center gap-3">
                   <Button
                     variant="outline"
                     size="sm"
