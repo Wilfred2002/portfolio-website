@@ -182,19 +182,19 @@ export default function HomePageClient() {
       {/* Quick Navigation */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Link href="/projects" className="group">
+          <a href="https://github.com/wilfred2002?tab=repositories" target="_blank" rel="noopener noreferrer" className="group">
             <div className="glass rounded-xl border border-white/10 p-6 hover:border-white/20 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/10">
               <div className="text-primary mb-3">
-                <ExternalLink className="w-8 h-8" />
+                <Github className="w-8 h-8" />
               </div>
               <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
                 Projects
               </h3>
               <p className="text-sm text-muted-foreground">
-                Discover my projects from GitHub.
+                View my repositories on GitHub.
               </p>
             </div>
-          </Link>
+          </a>
 
           <Link href="/about" className="group">
             <div className="glass rounded-xl border border-white/10 p-6 hover:border-white/20 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-secondary/10">

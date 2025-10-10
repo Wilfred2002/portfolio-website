@@ -1,18 +1,15 @@
 import { Metadata } from 'next';
-import ProjectGrid from '@/components/projects/ProjectGrid';
-import ProjectFilter from '@/components/projects/ProjectFilter';
-import { useProjects } from '@/hooks/useProjects';
-import ProjectsClient from '@/components/projects/ProjectsClient';
+import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'Projects | Portfolio',
-  description: 'Work I\'ve built.',
+  description: 'View my projects on GitHub.',
   openGraph: {
     title: 'Projects | Portfolio',
-    description: 'Work I\'ve built.',
+    description: 'View my projects on GitHub.',
   },
 };
 
 export default function ProjectsPage() {
-  return <ProjectsClient />;
+  redirect('https://github.com/wilfred2002?tab=repositories');
 }
