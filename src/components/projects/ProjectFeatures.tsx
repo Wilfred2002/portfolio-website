@@ -23,10 +23,10 @@ export default function ProjectFeatures({ project }: ProjectFeaturesProps) {
     >
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-          Key Features
+          Features
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          The standout features that make this project unique and valuable
+          What it does
         </p>
       </div>
 

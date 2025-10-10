@@ -42,10 +42,10 @@ export default function ProjectOutcomes({ project }: ProjectOutcomesProps) {
     >
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-          Project Outcomes
+          Outcomes
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          The impact, learnings, and future improvements from this project
+          Results and metrics
         </p>
       </div>
 
@@ -160,9 +160,9 @@ export default function ProjectOutcomes({ project }: ProjectOutcomesProps) {
       >
         <Card className="glass border-white/10">
           <CardContent className="p-8">
-            <h3 className="text-xl font-semibold mb-4">Interested in this project?</h3>
+            <h3 className="text-xl font-semibold mb-4">Check it out</h3>
             <p className="text-muted-foreground mb-6">
-              Check out the source code, try the live demo, or get in touch to discuss collaboration.
+              View the code or try the live demo.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               {project.liveUrl && (

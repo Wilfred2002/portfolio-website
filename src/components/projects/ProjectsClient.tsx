@@ -43,27 +43,12 @@ export default function ProjectsClient() {
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              My Projects
+              Projects
             </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-            A showcase of my journey as a developer, featuring full-stack applications, 
-            innovative tools, and creative solutions built with modern technologies.
+            Work I've built.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-            <span className="flex items-center">
-              <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-              {projects?.length || 0} Projects
-            </span>
-            <span className="flex items-center">
-              <span className="w-2 h-2 bg-secondary rounded-full mr-2"></span>
-              Full-Stack Development
-            </span>
-            <span className="flex items-center">
-              <span className="w-2 h-2 bg-accent rounded-full mr-2"></span>
-              Modern Technologies
-            </span>
-          </div>
         </div>
       </motion.section>
 

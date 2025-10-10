@@ -3,7 +3,7 @@ import SkillsClient from '@/components/skills/SkillsClient';
 
 export const metadata: Metadata = {
   title: 'Skills | Portfolio',
-  description: 'Discover my technical skills and expertise across various technologies.',
+  description: 'Technologies I work with.',
 };
 
 export default function SkillsPage() {

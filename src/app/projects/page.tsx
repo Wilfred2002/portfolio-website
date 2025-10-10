@@ -6,10 +6,10 @@ import ProjectsClient from '@/components/projects/ProjectsClient';
 
 export const metadata: Metadata = {
   title: 'Projects | Portfolio',
-  description: 'Explore my portfolio of innovative projects spanning web development, AI, and software engineering.',
+  description: 'Work I\'ve built.',
   openGraph: {
     title: 'Projects | Portfolio',
-    description: 'Explore my portfolio of innovative projects spanning web development, AI, and software engineering.',
+    description: 'Work I\'ve built.',
   },
 };
 

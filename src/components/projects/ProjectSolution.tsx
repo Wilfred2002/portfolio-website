@@ -20,10 +20,10 @@ export default function ProjectSolution({ project }: ProjectSolutionProps) {
     >
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-          The Solution
+          Solution
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          How I approached the challenges and implemented effective solutions
+          How I solved it
         </p>
       </div>
 
@@ -34,10 +34,9 @@ export default function ProjectSolution({ project }: ProjectSolutionProps) {
               <CheckCircle className="w-8 h-8 text-green-400" />
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Technical Approach</h3>
+              <h3 className="text-xl font-semibold mb-4">Approach</h3>
               <p className="text-muted-foreground leading-relaxed">
-                The solution involved careful planning, research, and implementation of 
-                modern technologies and best practices.
+                Implementation details.
               </p>
             </div>
           </div>

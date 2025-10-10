@@ -15,9 +15,9 @@ export default function SkillsGrid() {
       className="space-y-8"
     >
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-display font-bold mb-4">Skills by Category</h2>
+        <h2 className="text-3xl font-display font-bold mb-4">By Category</h2>
         <p className="text-muted-foreground">
-          Organized view of my technical skills and expertise
+          Skills organized by area
         </p>
       </div>
 
@@ -33,29 +33,12 @@ export default function SkillsGrid() {
             <Card className="glass border-white/10 h-full hover:border-white/20 transition-colors">
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold mb-4">{category}</h3>
-                <div className="space-y-3">
-                  {technologies.map(tech => {
-                    const skillData = Object.entries(skillsData).find(([key]) => key === tech);
-                    const level = skillData ? skillData[1].level : 0;
-                    
-                    return (
-                      <div key={tech} className="space-y-2">
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm font-medium">{tech}</span>
-                          <span className="text-xs text-muted-foreground">{level}%</span>
-                        </div>
-                        <div className="w-full bg-white/10 rounded-full h-1.5">
-                          <motion.div 
-                            className="bg-primary h-1.5 rounded-full"
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${level}%` }}
-                            transition={{ duration: 1, delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                          />
-                        </div>
-                      </div>
-                    );
-                  })}
+                <div className="flex flex-wrap gap-2">
+                  {technologies.map(tech => (
+                    <Badge key={tech} variant="secondary" className="text-xs">
+                      {tech}
+                    </Badge>
+                  ))}
                 </div>
               </CardContent>
             </Card>

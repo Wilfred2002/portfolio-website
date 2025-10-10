@@ -107,9 +107,9 @@ export default function SkillConstellation() {
   return (
     <div className="relative">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-display font-bold mb-4">Interactive Skills Map</h2>
+        <h2 className="text-3xl font-display font-bold mb-4">Skills Map</h2>
         <p className="text-muted-foreground">
-          Click on any skill to see related technologies and projects
+          Click to see related technologies
         </p>
       </div>
 
@@ -227,32 +227,18 @@ export default function SkillConstellation() {
                       
                       <div className="space-y-4">
                         <div>
-                          <h4 className="text-sm font-medium mb-2">Average Proficiency Level</h4>
-                          <div className="w-full bg-white/10 rounded-full h-2">
-                            <div 
-                              className="bg-primary h-2 rounded-full transition-all duration-500"
-                              style={{ width: `${node.level}%` }}
-                            />
-                          </div>
-                          <p className="text-sm text-muted-foreground mt-1">{node.level}%</p>
-                        </div>
-                        
-                        <div>
                           <h4 className="text-sm font-medium mb-2">Technologies</h4>
                           <div className="flex flex-wrap gap-2">
-                            {node.relatedSkills.map((skill: string) => {
-                              const skillData = skillsData[skill as keyof typeof skillsData];
-                              return (
-                                <Badge key={skill} variant="secondary" className="text-xs">
-                                  {skill} ({skillData?.level || 0}%)
-                                </Badge>
-                              );
-                            })}
+                            {node.relatedSkills.map((skill: string) => (
+                              <Badge key={skill} variant="secondary" className="text-xs">
+                                {skill}
+                              </Badge>
+                            ))}
                           </div>
                         </div>
-                        
+
                         <div>
-                          <h4 className="text-sm font-medium mb-2">Used in Projects</h4>
+                          <h4 className="text-sm font-medium mb-2">Projects</h4>
                           <div className="flex flex-wrap gap-2">
                             {node.projects.map((project: string) => (
                               <Badge key={project} variant="outline" className="text-xs">

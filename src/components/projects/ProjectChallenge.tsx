@@ -20,10 +20,10 @@ export default function ProjectChallenge({ project }: ProjectChallengeProps) {
     >
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-          The Challenge
+          Challenge
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Understanding the problem and identifying the key challenges
+          Problems addressed
         </p>
       </div>
 
@@ -34,10 +34,9 @@ export default function ProjectChallenge({ project }: ProjectChallengeProps) {
               <AlertCircle className="w-8 h-8 text-orange-400" />
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Problem Statement</h3>
+              <h3 className="text-xl font-semibold mb-4">Problem</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Every great project starts with identifying a real problem that needs solving. 
-                This project addressed several key challenges in the current landscape.
+                Key challenges this project solved.
               </p>
             </div>
           </div>

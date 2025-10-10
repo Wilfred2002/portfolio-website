@@ -18,12 +18,11 @@ export default function SkillsClient() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              Technical Skills
+              Skills
             </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-            My technical toolkit spans from frontend frameworks to backend systems, 
-            with expertise in modern web technologies and development practices.
+            Technologies I work with.
           </p>
         </div>
 
