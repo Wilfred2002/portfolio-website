@@ -47,7 +47,7 @@ export default function ProjectsClient() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-            Work I've built.
+            Work I&apos;ve built.
           </p>
         </div>
       </motion.section>
