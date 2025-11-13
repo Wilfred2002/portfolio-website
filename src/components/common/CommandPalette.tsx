@@ -47,15 +47,6 @@ const commands: CommandItem[] = [
     keywords: ['about', 'bio', 'background', 'experience']
   },
   {
-    id: 'skills',
-    title: 'Skills & Technologies',
-    description: 'Explore my technical skills and expertise',
-    icon: <FileText className="w-4 h-4" />,
-    href: '/skills',
-    category: 'Navigation',
-    keywords: ['skills', 'tech', 'technologies', 'expertise']
-  },
-  {
     id: 'contact',
     title: 'Get in Touch',
     description: 'Contact me for opportunities',
@@ -69,7 +60,7 @@ const commands: CommandItem[] = [
     title: 'GitHub Profile',
     description: 'View my GitHub repositories',
     icon: <Github className="w-4 h-4" />,
-    href: 'https://github.com/yourusername',
+    href: 'https://github.com/Wilfred2002',
     category: 'External',
     keywords: ['github', 'repos', 'code', 'profile']
   }
@@ -190,7 +181,7 @@ export default function CommandPalette() {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl mx-4 z-50"
+            className="fixed top-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl mx-4 z-50"
           >
             <div className="glass rounded-xl border border-white/10 overflow-hidden">
               {/* Header */}

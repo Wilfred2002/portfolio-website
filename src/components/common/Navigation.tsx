@@ -11,7 +11,6 @@ import { navVariants, mobileMenuVariants } from '@/lib/animations';
 const navigationItems = [
   { name: 'Projects', href: '/projects' },
   { name: 'About', href: '/about' },
-  { name: 'Skills', href: '/skills' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -63,15 +62,8 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center"
-              >
-                <span className="text-white font-bold text-sm">W</span>
-              </motion.div>
-              <span className="text-xl font-display font-semibold text-foreground group-hover:text-primary transition-colors">
-                Wilfred Naraga
+              <span className="text-xl font-display font-semibold text-foreground group-hover:text-primary transition-colors uppercase tracking-wide">
+                WILFRED NARAGA
               </span>
             </Link>
 

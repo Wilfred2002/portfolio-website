@@ -47,21 +47,25 @@ export default function AboutPage() {
                   </h2>
                   <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
-                      My journey in technology began at West Chester University of Pennsylvania, where I pursued 
+                      My journey in technology began at West Chester University of Pennsylvania, where I pursued
                       my Bachelor of Science in Computer Science.
                     </p>
                     <p>
-                      Through my experience, I&apos;ve had the opportunity to work on diverse projects 
-                      that span from restaurant websites driving customer acquisition growth to accessibility-focused 
-                      development for the Hearing Loss Association. Each project has taught me the importance of 
+                      Through my experience, I&apos;ve had the opportunity to work on diverse projects
+                      that span from building a cross-platform social ticketing app at Flux, to creating
+                      restaurant websites driving customer acquisition growth, to accessibility-focused
+                      development for the Hearing Loss Association. Each project has taught me the importance of
                       understanding both technical challenges and user needs.
                     </p>
                     <p>
-                      I&apos;m proficient across both frontend and backend development—building responsive React/TypeScript interfaces and reliable Node.js/.NET services—and I have foundational experience writing smart contracts in Solidity for on-chain workflows. 
+                      I&apos;m proficient across both frontend and backend development—building responsive React/TypeScript
+                      interfaces with React Native for mobile, architecting REST APIs with Node.js and PostgreSQL, and
+                      implementing real-time features with Supabase. I also have experience writing smart contracts in Solidity
+                      for blockchain applications and building developer tools for Web3 ecosystems.
                     </p>
                     <p>
                       When I&apos;m not coding, you&apos;ll find me traveling, gaming, or reading manga!
-                      If you want to connect with me, you can find me on LinkedIn or send me an email!
+                      If you want to connect with me, you can find me on LinkedIn or send me an email at wfnaraga@gmail.com!
                     </p>
                   </div>
                 </CardContent>
@@ -97,21 +101,21 @@ export default function AboutPage() {
                     <Briefcase className="w-5 h-5 mr-2 text-accent" />
                     Experience
                   </h3>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     <div>
-                      <h4 className="font-medium">Front End Engineer</h4>
-                      <p className="text-sm text-muted-foreground">Seoul Restaurant (Sep 2024 - Jun 2025)</p>
-                      <p className="text-sm text-muted-foreground">Drove 80% customer acquisition growth</p>
+                      <h4 className="font-medium">Founder + Software Engineer</h4>
+                      <p className="text-sm text-muted-foreground">Flux (Jun 2025 - Present)</p>
+                      <p className="text-sm text-muted-foreground">Built cross-platform social ticketing app with React Native</p>
                     </div>
                     <div>
-                      <h4 className="font-medium">Front-End Developer</h4>
+                      <h4 className="font-medium">Frontend Engineer</h4>
+                      <p className="text-sm text-muted-foreground">Seoul (Sep 2024 - Jun 2025)</p>
+                      <p className="text-sm text-muted-foreground">Mobile-first redesign driving 30% visitor increase</p>
+                    </div>
+                    <div>
+                      <h4 className="font-medium">Frontend Engineer (Contract)</h4>
                       <p className="text-sm text-muted-foreground">Hearing Loss Association (Aug 2024 - Jan 2025)</p>
-                      <p className="text-sm text-muted-foreground">Accessibility-focused web development</p>
-                    </div>
-                    <div>
-                      <h4 className="font-medium">Engineering Intern</h4>
-                      <p className="text-sm text-muted-foreground">Lua Engineering (Jun 2023 - Jul 2023)</p>
-                      <p className="text-sm text-muted-foreground">Game development with Lua scripting</p>
+                      <p className="text-sm text-muted-foreground">Website rebuild with 20% increase in organic traffic</p>
                     </div>
                   </div>
                 </CardContent>
@@ -134,30 +138,31 @@ export default function AboutPage() {
                   </h3>
                   <div className="space-y-3">
                     <div>
-                      <h4 className="font-medium text-sm mb-2">Frontend</h4>
+                      <h4 className="font-medium text-sm mb-2">Frontend & Mobile</h4>
                       <div className="flex flex-wrap gap-1">
                         <Badge variant="outline" className="text-xs">React</Badge>
+                        <Badge variant="outline" className="text-xs">React Native</Badge>
                         <Badge variant="outline" className="text-xs">TypeScript</Badge>
                         <Badge variant="outline" className="text-xs">Next.js</Badge>
-                        <Badge variant="outline" className="text-xs">Tailwind CSS</Badge>
+                        <Badge variant="outline" className="text-xs">React Query</Badge>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-medium text-sm mb-2">Backend</h4>
+                      <h4 className="font-medium text-sm mb-2">Backend & Database</h4>
                       <div className="flex flex-wrap gap-1">
                         <Badge variant="outline" className="text-xs">Node.js</Badge>
-                        <Badge variant="outline" className="text-xs">Python</Badge>
-                        <Badge variant="outline" className="text-xs">Express</Badge>
-                        <Badge variant="outline" className="text-xs">MongoDB</Badge>
+                        <Badge variant="outline" className="text-xs">PostgreSQL</Badge>
+                        <Badge variant="outline" className="text-xs">Supabase</Badge>
+                        <Badge variant="outline" className="text-xs">REST API</Badge>
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-medium text-sm mb-2">Tools & Others</h4>
+                      <h4 className="font-medium text-sm mb-2">Blockchain & Tools</h4>
                       <div className="flex flex-wrap gap-1">
+                        <Badge variant="outline" className="text-xs">Solidity</Badge>
+                        <Badge variant="outline" className="text-xs">Web3</Badge>
                         <Badge variant="outline" className="text-xs">Git</Badge>
-                        <Badge variant="outline" className="text-xs">Docker</Badge>
-                        <Badge variant="outline" className="text-xs">AWS</Badge>
-                        <Badge variant="outline" className="text-xs">Figma</Badge>
+                        <Badge variant="outline" className="text-xs">Whop SDK</Badge>
                       </div>
                     </div>
                   </div>
@@ -187,7 +192,7 @@ export default function AboutPage() {
                       </a>
                     </Button>
                     <Button variant="outline" className="w-full justify-start" asChild>
-                      <a href="mailto:wilfrednaraga@example.com">
+                      <a href="mailto:wfnaraga@gmail.com">
                         <Mail className="w-4 h-4 mr-2" />
                         Email
                       </a>
