@@ -47,16 +47,9 @@ export default function AboutPage() {
                   </h2>
                   <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
-                      My journey in technology began at West Chester University of Pennsylvania, where I pursued
-                      my Bachelor of Science in Computer Science.
+                      My journey in tech began when I was 12 on roblox, making an FPS game.
                     </p>
-                    <p>
-                      Through my experience, I&apos;ve had the opportunity to work on diverse projects
-                      that span from building a cross-platform social ticketing app at Flux, to creating
-                      restaurant websites driving customer acquisition growth, to accessibility-focused
-                      development for the Hearing Loss Association. Each project has taught me the importance of
-                      understanding both technical challenges and user needs.
-                    </p>
+                    <p>I’m currently working on Flux, a cross-platform social ticketing app that connects people through events. Right now, I see myself as an early-stage builder.</p>
                     <p>
                       I&apos;m proficient across both frontend and backend development—building responsive React/TypeScript
                       interfaces with React Native for mobile, architecting REST APIs with Node.js and PostgreSQL, and
@@ -64,8 +57,8 @@ export default function AboutPage() {
                       for blockchain applications and building developer tools for Web3 ecosystems.
                     </p>
                     <p>
-                      When I&apos;m not coding, you&apos;ll find me traveling, gaming, or reading manga!
-                      If you want to connect with me, you can find me on LinkedIn or send me an email at wfnaraga@gmail.com!
+                      When I&apos;m not coding, you&apos;ll find me playing lol or cooking a good meal(or eating it).
+                      If you want to connect with me send me an email at wfnaraga@gmail.com!
                     </p>
                   </div>
                 </CardContent>
