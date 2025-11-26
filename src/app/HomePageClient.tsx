@@ -109,7 +109,7 @@ export default function HomePageClient() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-3xl mx-auto">
                 <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                  Hey, It&apos;s Wilfred, welcome to my portfolio.
+                  Hey, It&apos;s Wilfred, scroll down!
                 </p>
                 <div className="mt-4 flex items-center justify-center gap-3">
                   <Button
