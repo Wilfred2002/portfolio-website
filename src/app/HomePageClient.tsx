@@ -20,8 +20,7 @@ export default function HomePageClient() {
 
   useEffect(() => {
     const totalFrames = 240;
-    const cacheBuster = typeof window !== 'undefined' ? String(Date.now()) : '1';
-    const frameUrl = (i: number) => `/frames/frame-${String(i).padStart(3, '0')}.jpg?v=${cacheBuster}`;
+    const frameUrl = (i: number) => `/frames/frame-${String(i).padStart(3, '0')}.jpg`;
 
     const loadImages = async () => {
       const loaded = await Promise.all(
@@ -53,26 +52,42 @@ export default function HomePageClient() {
     };
 
     loadImages().then(async () => {
+      if (imagesRef.current.length === 0) {
+        console.warn('No frames loaded');
+        return;
+      }
       drawFrame(1);
-      const gsap = (await import('gsap')).default;
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
+      
+      try {
+        const gsapModule = await import('gsap');
+        const scrollTriggerModule = await import('gsap/ScrollTrigger');
+        const gsap = gsapModule.default || gsapModule;
+        const ScrollTrigger = scrollTriggerModule.ScrollTrigger || scrollTriggerModule.default;
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: canvasContainerRef.current,
-          start: 'top top',
-          end: 'bottom bottom',
-          scrub: 1,
-          invalidateOnRefresh: true,
-        },
-      });
+        if (typeof gsap.registerPlugin === 'function') {
+          gsap.registerPlugin(ScrollTrigger);
+        }
 
-      tl.to(frameRef.current, {
-        frame: totalFrames,
-        ease: 'none',
-        onUpdate: () => drawFrame(Math.round(frameRef.current.frame)),
-      });
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: canvasContainerRef.current,
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: 1,
+            invalidateOnRefresh: true,
+          },
+        });
+
+        tl.to(frameRef.current, {
+          frame: totalFrames,
+          ease: 'none',
+          onUpdate: () => drawFrame(Math.round(frameRef.current.frame)),
+        });
+      } catch (error) {
+        console.error('GSAP initialization error:', error);
+      }
+    }).catch(error => {
+      console.error('Frame loading error:', error);
     });
 
     const handleResize = () => drawFrame(Math.round(frameRef.current.frame));
@@ -151,78 +166,79 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Quick Navigation */}
-      <section className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-b from-transparent via-background to-surface/50">
-        {/* Decorative background glow */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
-
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-10 relative z-10"
-        >
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-3 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            Explore More
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover my work, learn about my journey, or get in touch
-          </p>
-        </motion.div>
-
-        {/* Cards Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto relative z-10"
-        >
-          <a href="https://github.com/wilfred2002?tab=repositories" target="_blank" rel="noopener noreferrer" className="group">
-            <div className="glass rounded-xl border border-white/10 p-8 hover:border-primary/50 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20 hover:bg-white/5 hover:scale-105 h-full">
-              <div className="text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Github className="w-10 h-10" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                Projects
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                View my repositories on GitHub.
-              </p>
+      {/* OpenSesame Creative Project Answers */}
+      <section className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        <div className="max-w-4xl">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+              <span className="text-sm font-semibold text-primary">OpenSesame Summer 2026 Internship</span>
             </div>
-          </a>
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              Why OpenSesame?
+            </h2>
+          </motion.div>
 
-          <Link href="/about" className="group">
-            <div className="glass rounded-xl border border-white/10 p-8 hover:border-secondary/50 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-secondary/20 hover:bg-white/5 hover:scale-105 h-full">
-              <div className="text-secondary mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Github className="w-10 h-10" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 group-hover:text-secondary transition-colors">
-                About
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                My journey from computer science student to passionate full-stack developer.
-              </p>
-            </div>
-          </Link>
+          {/* Paragraph 1 */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8"
+          >
+            I see OpenSesame fitting into my career as a pivotal point where I can experience working in a professional team environment. I can meet people with the same tech interests and career goals like myself. Also, because OpenSesame is an AI-forward team, it won&apos;t be very different from the workflow I use right now—I always leverage AI to develop features in half the time.
+          </motion.p>
 
-          <Link href="/contact" className="group">
-            <div className="glass rounded-xl border border-white/10 p-8 hover:border-accent/50 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-accent/20 hover:bg-white/5 hover:scale-105 h-full">
-              <div className="text-accent mb-4 group-hover:scale-110 transition-transform duration-300">
-                <ExternalLink className="w-10 h-10" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 group-hover:text-accent transition-colors">
-                Contact
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Let&apos;s connect! Open to opportunities, collaborations, and meaningful conversations.
-              </p>
-            </div>
-          </Link>
-        </motion.div>
+          {/* Paragraph 2 */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8"
+          >
+            I bring a founder perspective to the team. I think from the user experience all the way down to the core behind the app itself. I first think: how can I bring more value to the user, retain them, or what makes sense before building anything in the backend? I believe education is the future, and OpenSesame will be a key player in workforce development—I&apos;m confident I can ship new features that guarantee better user feedback.
+          </motion.p>
 
+          {/* Paragraph 3 */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12"
+          >
+            What excites me about working with AI is how fast modern industry workflows change. Two years ago, I was prompting ChatGPT to get the code output I wanted. Now many engineers prompt ChatGPT to create a prompt for the Claude CLI to do their task. People have their own way of doing things, but it&apos;s cool to see how people leverage AI to build and ship faster.
+          </motion.p>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row items-start gap-4"
+          >
+            <Button size="lg" asChild className="group">
+              <Link href="/projects">
+                View Projects
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/contact">
+                Get in Touch
+              </Link>
+            </Button>
+          </motion.div>
+        </div>
       </section>
     </div>
   );
