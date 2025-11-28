@@ -194,7 +194,8 @@ export default function HomePageClient() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8"
           >
-            In short, I'm an early-stage co-founder and engineer of a startup which is basically Ticketmaster + Bereal for live events. I'm currently in school as a senior for computer science, I actually switched into computer science late so I've been working to catch up to my peers. What I've accomplished so far is that I've built an MCP Server that can help developers use AI to test and deploy smart contracts on the Ethereum network. I've built a Whop application that helps recover payments between $200-1500 a month on average for any application that has mrr.       </motion.p>
+            In short, I&apos;m an early-stage co-founder and engineer of a startup which is basically Ticketmaster + Bereal for live events. I&apos;m currently in school as a senior for computer science, I actually switched into computer science late so I&apos;ve been working to catch up to my peers. What I&apos;ve accomplished so far is that I&apos;ve built an MCP Server that can help developers use AI to test and deploy smart contracts on the Ethereum network. I&apos;ve built a Whop application that helps recover payments between $200-1500 a month on average for any application that has mrr.
+          </motion.p>
 
           {/* Paragraph 3 */}
           <motion.p
