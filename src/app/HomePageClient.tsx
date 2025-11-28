@@ -109,7 +109,7 @@ export default function HomePageClient() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-3xl mx-auto">
                 <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                  Hey, It&apos;s Wilfred, scroll down!
+                  Hey, It&apos;s Wilfred, scroll down!.
                 </p>
                 <div className="mt-4 flex items-center justify-center gap-3">
                   <Button
@@ -178,23 +178,13 @@ export default function HomePageClient() {
             className="mb-12"
           >
             <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <span className="text-sm font-semibold text-primary">OpenSesame Summer 2026 Internship</span>
+              <span className="text-sm font-semibold text-primary">Read This</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               Why OpenSesame?
             </h2>
           </motion.div>
 
-          {/* Paragraph 1 */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8"
-          >
-            I see OpenSesame fitting into my career as a pivotal point where I can experience working in a professional team environment. I can meet people with the same tech interests and career goals like myself. Also, because OpenSesame is an AI-forward team, it won&apos;t be very different from the workflow I use right now—I always leverage AI to develop features in half the time.
-          </motion.p>
 
           {/* Paragraph 2 */}
           <motion.p
@@ -204,8 +194,7 @@ export default function HomePageClient() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8"
           >
-            I bring a founder perspective to the team. I think from the user experience all the way down to the core behind the app itself. I first think: how can I bring more value to the user, retain them, or what makes sense before building anything in the backend? I believe education is the future, and OpenSesame will be a key player in workforce development—I&apos;m confident I can ship new features that guarantee better user feedback.
-          </motion.p>
+            In short, I'm an early-stage co-founder and engineer of a startup which is basically Ticketmaster + Bereal for live events. I'm currently in school as a senior for computer science, I actually switched into computer science late so I've been working to catch up to my peers. What I've accomplished so far is that I've built an MCP Server that can help developers use AI to test and deploy smart contracts on the Ethereum network. I've built a Whop application that helps recover payments between $200-1500 a month on average for any application that has mrr.       </motion.p>
 
           {/* Paragraph 3 */}
           <motion.p
